@@ -1,16 +1,16 @@
 version: 0.2
 
 phases:
-install:
-runtime-versions:
-nodejs: 20
+  install:
+    runtime-versions:
+      nodejs: 20
 
-build:
-commands:
-- echo "Build Started"
-- node -v
-- npm -v
+  build:
+    commands:
+      - echo "Build Started"
+      - node -v
+      - npm -v
 
 artifacts:
-files:
-- '**/*'
+  files:
+    - '**/*'
