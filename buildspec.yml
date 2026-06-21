@@ -1,16 +1,15 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 20
+build:
+commands:
+- echo "Deploying to EC2"
 
-  build:
-    commands:
-      - echo "Build Started"
-      - node -v
-      - npm -v
+```
+  - aws ssm send-command \
+    --instance-ids i-043a237a6648bcbaf \
+    --document-name "AWS-RunShellScript" \
+    --parameters commands="/home/ubuntu/deploy/deploy.sh" \
+    --region ap-south-1
+```
 
-artifacts:
-  files:
-    - '**/*'
