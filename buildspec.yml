@@ -7,11 +7,10 @@ nodejs: 20
 
 build:
 commands:
-- echo Build Started
+- echo "Build Started"
 - node -v
 - npm -v
 
 artifacts:
 files:
-- app.js
-
+- '**/*'
