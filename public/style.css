@@ -2,34 +2,41 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background: linear-gradient(135deg,#1e3c72,#2a5298);
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
+background:linear-gradient(135deg,#ff8c00,#ffb347,#ffd580);
+padding:20px;
 }
 
 .container{
-width:90%;
-max-width:700px;
+width:100%;
+max-width:850px;
 background:white;
 border-radius:20px;
 padding:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
+box-shadow:0 15px 40px rgba(255,140,0,0.35);
 }
 
 .header{
 text-align:center;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
 .header h1{
-color:#1e3c72;
+color:#ff7b00;
 margin-bottom:10px;
+transition:0.3s;
+}
+
+.header h1:hover{
+transform:scale(1.05);
+text-shadow:0 0 20px #ffb347;
 }
 
 .header p{
@@ -44,28 +51,44 @@ margin-bottom:25px;
 
 .task-form input{
 flex:1;
-padding:12px;
-border:2px solid #ddd;
+padding:14px;
+border:2px solid #ffb347;
 border-radius:10px;
 font-size:16px;
+}
+
+.task-form input:focus{
+outline:none;
+border-color:#ff7b00;
+box-shadow:0 0 10px rgba(255,123,0,0.4);
 }
 
 .task-form button{
-background:#1e3c72;
-color:white;
+padding:14px 22px;
 border:none;
-padding:12px 20px;
 border-radius:10px;
+background:#ff7b00;
+color:white;
+font-weight:bold;
 cursor:pointer;
-font-size:16px;
 transition:0.3s;
 }
 
-.task-form button:hover
+.task-form button:hover{
+background:#ff9500;
+transform:translateY(-2px);
+box-shadow:0 0 15px rgba(255,123,0,0.5);
+}
 
-.task-section h2{
+.task-card{
+background:#fff7ed;
+padding:20px;
+border-radius:15px;
+}
+
+.task-card h2{
 margin-bottom:15px;
-color:#333;
+color:#ff7b00;
 }
 
 #taskList{
@@ -73,23 +96,33 @@ list-style:none;
 }
 
 #taskList li{
-background:#f4f6f8;
-margin-bottom:10px;
+background:white;
+margin-bottom:12px;
 padding:15px;
-border-radius:10px;
-border-left:5px solid #1e3c72;
+border-radius:12px;
+border-left:6px solid #ff7b00;
 display:flex;
 justify-content:space-between;
 align-items:center;
+transition:0.3s;
+}
+
+#taskList li:hover{
+transform:translateX(5px);
+box-shadow:0 5px 15px rgba(255,123,0,0.25);
 }
 
 .delete-btn{
-background:#e74c3c;
+background:#ff5722;
 color:white;
 border:none;
-padding:8px 12px;
-border-radius:6px;
+padding:8px 14px;
+border-radius:8px;
 cursor:pointer;
+transition:0.3s;
 }
 
-.delete-btn:hover
+.delete-btn:hover{
+background:#e64a19;
+box-shadow:0 0 12px rgba(230,74,25,0.5);
+}
