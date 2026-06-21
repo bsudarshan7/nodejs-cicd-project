@@ -1,36 +1,95 @@
-<!DOCTYPE html>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Task Manager</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body{
+background: linear-gradient(135deg,#1e3c72,#2a5298);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
 
-<div class="container">
+.container{
+width:90%;
+max-width:700px;
+background:white;
+border-radius:20px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-```
-<div class="header">
-    <h1>🚀 DevOps Task Manager</h1>
-    <p>AWS CI/CD Pipeline Project</p>
-</div>
+.header{
+text-align:center;
+margin-bottom:25px;
+}
 
-<div class="task-form">
-    <input type="text" id="taskInput" placeholder="Enter a new task">
-    <button onclick="addTask()">Add Task</button>
-</div>
+.header h1{
+color:#1e3c72;
+margin-bottom:10px;
+}
 
-<div class="task-section">
-    <h2>My Tasks</h2>
-    <ul id="taskList"></ul>
-</div>
-```
+.header p{
+color:#666;
+}
 
-</div>
+.task-form{
+display:flex;
+gap:10px;
+margin-bottom:25px;
+}
 
-<script src="script.js"></script>
+.task-form input{
+flex:1;
+padding:12px;
+border:2px solid #ddd;
+border-radius:10px;
+font-size:16px;
+}
 
-</body>
-</html>
+.task-form button{
+background:#1e3c72;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.task-form button:hover
+
+.task-section h2{
+margin-bottom:15px;
+color:#333;
+}
+
+#taskList{
+list-style:none;
+}
+
+#taskList li{
+background:#f4f6f8;
+margin-bottom:10px;
+padding:15px;
+border-radius:10px;
+border-left:5px solid #1e3c72;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.delete-btn{
+background:#e74c3c;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.delete-btn:hover
